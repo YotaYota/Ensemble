@@ -40,6 +40,7 @@ public class Particle extends PhysicalBody implements MovingBody {
         g.fillRect(x,y, width, height);
     }
 
+    // TODO : make sure this if statement works
     @Override
     public boolean hasCollidedWith(MovingBody otherBody) {
         if (otherBody.getClass() ==  Wall.class ) {

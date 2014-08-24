@@ -28,6 +28,7 @@ public class Handler {
         objects.add(body);
     }
 
+    // TODO: gas is also a container -> find out a good way to get the bounds of each particle in gas.
     public void checkCollisions() {
         for (PhysicalBody object1 : objects) {
             for (PhysicalBody object2 : objects) {

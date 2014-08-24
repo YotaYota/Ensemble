@@ -16,6 +16,7 @@ public class Gas extends PhysicalBody {
         populateGas(N, boundsX, boundsY);
     }
 
+    // TODO : reuse code
     public void populateGas(int N, int boundsX, int boundsY) {
         Random rand = new Random();
         for (int i = 0; i < N; i++) {

@@ -27,6 +27,7 @@ public class Experiment extends Canvas implements Runnable {
         new Window(HEIGHT, WIDTH, "Canonical Ensemble", new Experiment());
     }
 
+    // TODO : make clearer distinction between gas/walls and handler.
     private void init() {
 
         HEIGHT = getHeight();
@@ -37,6 +38,7 @@ public class Experiment extends Canvas implements Runnable {
         gas = new Gas(100, WIDTH, HEIGHT);
         walls = new ArrayList<Wall>();
 
+        // TODO: move to handler
         // Creates a box
         Wall wallTop = new Wall(0, 0, WIDTH, 1, 0);
         Wall wallLeft = new Wall(0, 0, 1, HEIGHT, 1);
