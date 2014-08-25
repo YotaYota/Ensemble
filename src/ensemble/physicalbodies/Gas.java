@@ -51,9 +51,7 @@ public class Gas extends PhysicalBody {
     }
 
     public void increment() {
-        for (Particle particle : particles) {
-            particle.increment();
-        }
+        for (Particle particle : particles) particle.increment();
     }
 
     @Override
@@ -62,9 +60,7 @@ public class Gas extends PhysicalBody {
     }
 
     public void render(Graphics g) {
-        for (Particle particle : particles) {
-            particle.render(g);
-        }
+        for (Particle particle : particles) particle.render(g);
     }
 
     @Override

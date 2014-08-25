@@ -9,8 +9,9 @@ public class Wall extends PhysicalBody {
 
     // Horizontal = 0, Vertical = 1
     public int ORIENTATION;
+    public int collisionCounter = 0;
 
-    public Wall(int x, int y, int width, int height, int orientation){
+    public Wall(int x, int y, int width, int height, int orientation) {
         this.x = x;
         this.y = y;
         this.width = width;
@@ -28,13 +29,17 @@ public class Wall extends PhysicalBody {
     public void render(Graphics g) {
         g.setColor(Color.WHITE);
         g.fillRect(x, y, width, height);
+        g.setColor(Color.BLUE);
+        g.drawString("Collisions: " + collisionCounter, x + width / 2, y + height / 2);
     }
 
     @Override
     public boolean hasCollidedWith(MovingBody otherBody) {
+        collisionCounter += 1;
         return true;
     }
 
     @Override
-    public void increment() {}
+    public void increment() {
+    }
 }
